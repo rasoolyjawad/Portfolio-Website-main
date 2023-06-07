@@ -1,0 +1,88 @@
+// config
+$website-width: 1280px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$dark-color: #333;
+$medium-color: #ccc;
+$bg-img: url('../img/keepcoding.jpg');
+
+.container{
+  max-width: $website-width;
+  margin: auto;
+  padding:0 1.5rem;
+  overflow: hidden;
+  text-align: center;
+  // 
+}
+.py{
+  &-1{
+    padding: 1rem 0;
+  }
+  &-2{
+    padding: 2rem 0;
+  }
+  &-3{
+    padding: 3rem 0;
+  }
+}
+.my{
+  &-1{
+    padding: 1rem 0;
+  }
+  &-2{
+    padding: 2rem 0;
+  }
+  &-3{
+    padding: 3rem 0;
+  }
+}
+
+a{
+  text-decoration: none;
+  color:$dark-color;
+}
+.btn{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin: 1rem auto;
+  border: none;
+  background-color: $light-color;
+  cursor: pointer;
+  &:hover{
+    opacity: 0.8;
+    transition: 0.5s all ease;
+  }
+
+}
+
+h2,h3,h4{
+  text-transform: uppercase;
+}
+ul{
+  list-style: none;
+}
+img{
+  width: 100%;
+}
+.bottom-line{
+  background: $main-color;
+  width: 50px;
+  height: 2px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+.bg-light{
+  background-color: $light-color;
+
+}
+.bg-dark{
+  background-color: $dark-color;
+}
+
+ 
+
+
+

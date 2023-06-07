@@ -1,0 +1,382 @@
+@import 'utilities';
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:'Dosis', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+
+
+
+}
+
+.header-home{
+  filter: blur(0px);
+  z-index: 6;
+  color: #fff;
+  
+
+}
+
+
+
+
+
+#header-home{ 
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  color: #f4f4f4;
+  background:$bg-img center center/cover;
+ 
+  
+}
+
+ 
+
+#header-home::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  
+}
+
+#header-home *{
+  z-index: 1;
+}
+.opac{
+  position: relative;
+  
+}
+
+
+
+#header-content {
+  margin-top: 10rem;
+  h1{
+    font-size: 4rem;
+
+  }
+  p{
+    font-size: 1.2rem;
+  }
+ 
+}
+
+#main-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    
+  ul{
+    display: flex;
+  }
+  li{
+    padding: 0 1rem;
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+    &:hover{
+      border-color: $medium-color;
+    }
+    &.current{
+      border-color:$main-color;
+
+    }
+
+
+
+  }
+}
+// logo
+.fa-bolt{
+  color: $main-color;
+}
+#logo{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  color: #f4f4f4;
+ }
+ 
+
+//  home
+#home{
+  &-a{
+   .specials{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    grid-gap: 1rem;
+    margin-top: 3rem;
+   }
+   .fa-solid{
+    color:$main-color;
+   }
+  }
+  &-b{
+    
+    ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    p{
+      font-size: 2rem;
+    }
+  }
+  li:nth-child(odd){
+    background:$light-color;
+    padding: 3rem;
+
+  }
+  li:nth-child(even){
+    background:$medium-color;
+    padding: 3rem;
+
+  }
+  }
+  &-c{
+    .process{
+      
+      grid-gap: 1rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+
+    }
+      &-step{
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 28px;
+      background-color: $main-color;
+      border-radius: 50%;
+      height: 15px;
+      width: 15px;
+      line-height: 15px;
+      padding: 1rem;
+      transition: all 1s;
+    }
+   
+      
+    
+
+    }
+    
+    
+  
+}
+.clr{
+  clear: all;
+}
+#main-footer{
+  
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+    
+  }
+  
+  .socials a i{
+    padding: 0 0.4rem;
+    color: #fff;
+    font-size: 2rem;
+
+    
+    
+    outline-color: $main-color;
+    &:hover{
+      color: $main-color;
+    }
+   
+    
+  }
+}
+#header-about{
+  background: $bg-img 70% 70%;
+  border-bottom: $main-color solid 2px;
+  
+}
+// About section
+#about{
+  &-a{
+    .about-info {
+      display: grid;
+      grid-gap: 1.2rem;
+      grid-template-areas: 
+      'bioimage bio bio'
+      'aw1 aw2 aw3';
+    }
+    .bio-image  {
+      grid-area: bioimage;
+    }
+    .bio{
+      grid-area: bio;
+      border-left: 3px $main-color solid;
+      padding: 0.8rem;
+    }
+    .award-1{
+      grid-area: aw1;
+    }
+    .award-2{
+      grid-area: aw2;
+
+    }
+    .award-3{
+      grid-area: aw3;
+    }
+  }
+  &-b{
+    color: #fff;
+    .progress{
+      height: 20px;
+      overflow: hidden;
+      background-color: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+      div{
+        height: 100%;
+        color: #fff;
+        background: $main-color;
+        text-align: center;
+      }
+    }
+    .container h4{
+      text-align: left;
+    }
+
+  }
+  &-c{
+    .about-logos{
+      display: grid;
+      grid-gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 1rem;
+      img{
+        width: 100%;
+        
+      }
+    }
+
+  }
+
+}
+
+// Contact
+#contact{
+  &-a{
+    .text-area{
+      display: grid;
+      grid-gap: 1.2rem;
+      width: 700px;
+      margin: 0 auto;
+      grid-template-areas:
+      'name email'
+      'subject phone'
+      'message message'
+      'submit submit'; 
+    }
+    .name{
+      grid-area: name;
+    }
+    .submit{
+      grid-area: submit;
+    }
+    .email{
+      grid-area: email;
+
+    }
+    .subject{
+      grid-area: subject;
+
+    }
+    .phone{
+      grid-area: phone;
+    }
+    .message{
+      grid-area: message;
+      height: 8rem;
+      
+    }
+    .text{
+      padding: 0.5rem;
+      outline-color: $main-color;
+    }
+    
+    form .submit{
+      
+      padding: 0.8rem;
+      background-color: $dark-color;
+      color: #f4f4f4;
+      border: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        background-color: $main-color
+        ;
+        color: #333;
+        border: none;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    
+  }
+  &-b{
+    .container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      color: #f4f4f4;
+
+    }
+  }
+  &-c{
+    background-color: $main-color;
+    font-size: 2.3rem;
+    text-align: center;
+    color: #f4f4f4;
+
+  }
+}
+.loadingText{
+
+  font-size: 5rem;
+  z-index: 7;
+  color: #fff;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  padding: 0;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  bottom: 50%;
+  position: absolute;
+  align-self: center
+ 
+}
+@import'media';
+
+
+
